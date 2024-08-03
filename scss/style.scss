@@ -1,0 +1,28 @@
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixin' as *;
+
+
+@import 
+    'base/reset', 
+    'base/helpers',
+    'base/base',
+    'base/color',
+    'base/typography';
+    
+
+@import 
+    'components/header',
+    'components/job-card',
+    'components/form',
+    'components/details',
+    'components/loading';
+//run sass and make build to compress//
+
+
+
+
+
+
+
+
+

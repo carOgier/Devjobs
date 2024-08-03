@@ -1,0 +1,78 @@
+/*****Loading animation*****/
+.smoke {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.smoke span{
+    background:linear-gradient(to right, var(--btn-text), var(--btn-color));
+    -moz-background-clip:text ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    letter-spacing: 10px;
+    font-size: 2rem;    
+    animation: animate 10s linear infinite;   
+}
+
+.smoke span:nth-child(1){
+    animation-delay: 1s;
+}
+
+.smoke span:nth-child(2){
+    animation-delay: 2s;
+}
+
+.smoke span:nth-child(3){
+    animation-delay: 2.5s;
+}
+
+.smoke span:nth-child(4){
+    animation-delay: 3s;
+}
+
+.smoke span:nth-child(5){
+    animation-delay: 3.5s;
+}
+
+.smoke span:nth-child(6){
+    animation-delay: 4s;
+}
+
+.smoke span:nth-child(7){
+    animation-delay: 4.5s;
+}
+
+
+@keyframes animate {
+    0%{
+        filter: blur(0);
+    }    
+
+    10%{
+        filter: blur(200px);
+    } 
+
+    20%{
+        filter: blur(200px);
+    } 
+
+    30%{
+        filter: blur(200px);
+    } 
+
+    50%{
+        filter:none;
+    }
+    60%{
+        filter: none;
+    }
+    70%{
+        filter:none;
+    }
+
+
+}
+
+

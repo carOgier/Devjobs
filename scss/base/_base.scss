@@ -1,0 +1,100 @@
+//container and responsive//
+
+.container {
+    width: calc(100% - 1.5rem - 1.5rem);
+    margin-inline: auto;
+}
+
+
+@media screen and (min-width: 23em) {   
+    .container {
+        max-width: 30rem; 
+    }
+}
+
+
+@media screen and (min-width: 48em) {  /*eq 783px*/
+    .container {
+        max-width: 43rem; 
+    }
+}
+/*
+@media screen and (min-width: 62em) {  eq 992px 
+    .container {
+        max-width: 55rem; 
+    }
+}
+
+@media screen and (min-width: 75em) {  eq 1200px 
+    .container {
+        max-width: 62rem; 
+    }
+}
+*/
+@media screen and (min-width: 90em) { /*eq 1440px */
+    .container {
+        max-width: 69.3rem;
+    }
+}
+
+
+@media screen and (min-width: 90em) { /*eq 1440px */
+    .detail-container {
+        max-width: 46rem;
+    }
+}
+
+
+
+
+
+
+.load-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-block-start: 1.75rem;
+    margin-block-end: 3.9rem;
+}
+@media(min-width: 768px){
+    .load-btn {
+        margin-block-start: 3.5rem;
+        margin-block-end: 10rem;
+    }
+}
+
+body {
+    background-color: var(--background-color);
+    
+}
+
+button {
+    background-color: var(--btn-color);
+    padding: .8rem;
+    border-radius: 5px;
+    border:none;
+    color: var(--btn-text);
+    font-weight: 700;
+    max-height: 3rem;
+}
+
+
+.load-more-button, .fake-btn {
+    &:focus, 
+    &:hover {
+        background-color: var(--btn-hover);
+    }
+}
+
+#skiplink{
+	position:absolute;
+	left : -10000px;
+	color:#fff;
+	background-color: #000;
+}
+
+#skiplink:focus{
+	display:block;
+	left : 8.2em;
+}
+

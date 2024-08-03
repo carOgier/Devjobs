@@ -1,0 +1,61 @@
+/*****Typography*****/
+/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options.*/
+/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+
+
+@font-face {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), 
+      url("../fonts/Kumbh_Sans/KumbhSans-Regular.ttf") format("truetype"); 
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), 
+      url("../fonts/Kumbh_Sans/KumbhSans-Bold.ttf") format("truetype"); 
+}
+
+
+h1, .h1 {
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  color: var(--job-title);
+}
+
+h3{
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--job-title);
+}
+
+.h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--job-title);
+}
+
+h4 {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  color: var(--small-text);
+}

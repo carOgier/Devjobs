@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevJobs</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav role="navigation">
+        <a href="#job-list" id="skiplink">Main Content</a>
+    </nav>
+    
+    <header role="banner" class="main-header">
+        <div class="container"> 
+            <div class="header-content">
+
+                <div class="logo-container">
+                    <h1 class="screen-reader-text">DevJobs</h1>
+                    <a href="index.html" class="logo-link" aria-label="return to home page">
+                        <img src="./assets/logo.svg" alt="" class="logo">
+                    </a>
+                </div>
+
+                <div class="toggle-container">
+                    <img src="./assets/icon-sun.svg" alt="" class="sun-icon">
+                    <label for="toggle-switch" >
+                        <input type="checkbox" tabindex="0" id="toggle-switch" aria-label="Toggle Theme" class="screen-reader-text switch">
+                        <span></span>
+                    </label>
+                    <img src="./assets/icon-moon.svg" alt="" class="moon-icon">
+                </div>    
+
+            </div>
+        </div>
+    </header>
+    
+
+    <main class="main-content">
+        
+        <section class="search-form-container">
+            <div class="container">
+                <form action="#" role="search" class="search-form-content" id="search-form-content">
+                    
+                    <div class="reduced-form">
+                        <svg class="form-icon tablet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="#5964E0" d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 0 0 2.15-5.784A8.898 8.898 0 0 0 8.898 0 8.898 8.898 0 0 0 0 8.898a8.898 8.898 0 0 0 8.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 1 1 8.9 2.737a6.16 6.16 0 0 1 0 12.322z"/>
+                            </svg>
+                        <div class="form-title">
+                            
+                            <label for="title" class="screen-reader-text">Search by title</label>
+                            <input type="text" id="title" placeholder="Filter by title..." class="input-title">
+                        </div>
+
+                        <button type="button" id="filter-form" aria-label="button to see other filters" class="filter-btn mobile-only">
+                            <svg class="svg-filter mobile-only" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M19.108 0H.86a.86.86 0 0 0-.764.455.833.833 0 0 0 .068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 0 0 .248.594.865.865 0 0 0 .942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0 0 19.108 0z"/>
+                            </svg>
+                        </button>
+                         
+                    </div>
+                    
+
+                    <div id="overlay" class="overlay" hidden></div>
+                    <div id="modal-form" class="modal-form" hidden>
+                            
+                        <div class="form-location">
+                            <label for="location" class="screen-reader-text">Location</label>
+                            <svg class="location-icon form-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 24">
+                                <path fill="#5964E0" d="M14.358 2.451A8.3 8.3 0 0 0 8.448 0a8.3 8.3 0 0 0-5.911 2.451c-2.922 2.925-3.285 8.427-.786 11.76l6.697 9.683 6.687-9.669c2.508-3.347 2.145-8.85-.777-11.774zm-5.833 8.894a3.057 3.057 0 0 1-3.051-3.054 3.057 3.057 0 0 1 3.05-3.055 3.057 3.057 0 0 1 3.052 3.055 3.057 3.057 0 0 1-3.051 3.054z"/>
+                            </svg>
+                            <input type="text" id="location" placeholder="Filter by location..." class="input-location">
+                        </div> 
+
+                        <div class="form-time">
+                            <label for="time">
+                                <input type="checkbox" id="time" aria-label="Full-time only checkbox" class="fulltime-checkbox">
+                                <span class="time-checkbox"></span>
+                            <span>Full-time
+                            <span class="tablet-hide">only</span></span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn">Search</button>
+                    </div>
+
+                    <button type="submit" class="btn-search mobile-only">
+                        <span class="tablet">Search</span>
+                        <span class="search-icon mobile-only">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="#ffffff" d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 0 0 2.15-5.784A8.898 8.898 0 0 0 8.898 0 8.898 8.898 0 0 0 0 8.898a8.898 8.898 0 0 0 8.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 1 1 8.9 2.737a6.16 6.16 0 0 1 0 12.322z"/>
+                          </svg>
+                        </span>
+                    </button>
+
+                </form>
+                
+            </div>
+        </section>
+
+
+        <section role="main" class="job-cards">
+            <div id="job-result" class="container">
+               
+                <div id="job-list" tabindex="-1" class="job-list">
+                </div>    
+                
+            </div>
+
+            <div id="load-more" class="load-btn">
+                <span class="no-more"></span>
+              <button type="button" class="load-more-button">Load More</button>  
+            </div>    
+            
+        </section>
+    </main>
+
+
+
+
+    <template id="job-template">
+        <div class="job-card">
+            <a href="#" alt="" id="job-link" class="link-job-title">
+            <h2 class="position h3">Senior Software Engineer</h2>
+            </a>
+            <img src="" alt="" class="logo-company" style="background-color: #E99210">
+            <!--Pourquoi la couleur hsl de certain est bizarre ? la luminosité est à 90 pour certains pourtant la conversion est exact en rgb-->
+            <span class="ts-contract-data">5h ago &#8226; full time </span> 
+            <p  class="company">Scoot</p>
+            <p class="card-location">United Kingdom</p>
+        </div>
+    </template>
+
+    <script src="./scripts/loadingAnimation.js"></script>
+    <script src="./scripts/api.js"></script>
+    <script src="./scripts/index.js"></script>
+    
+    <script src="./scripts/timestamps.js"></script>
+    <script src="./scripts/theme.js"></script>
+    
+</body>
+</html>

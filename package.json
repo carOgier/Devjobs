@@ -1,0 +1,14 @@
+{
+  "name": "ecf-front-end",
+  "version": "1.0.0",
+  "description": "ECF Front-End HTML, CSS, Javascript",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss:css --watch"
+  },
+  "author": "Caroline Ogier",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.71.1"
+  }
+}

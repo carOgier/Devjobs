@@ -1,0 +1,50 @@
+
+/*****Mixin pour les couleurs*****/
+/*Si j'ai le temps utiliser les 'variables' as * pour les couleurs*/
+
+
+@mixin lightMode {
+        --background-color: #f4f6f8;
+        --background-div: #ffffff;
+        --icon : #6E8098;
+        --job-title : #19202d;
+        --btn-color : #5964E0;
+        --btn-text: #ffffff;
+        --small-text: #6e8098;
+        --btn-hover: #939BF4; 
+        --checkbox-color:rgba(25, 32, 45, 0.1);
+        --company-button-mobile-background: rgb(89, 100, 224, 0.1);
+        --company-button-mobile-text: #5964E0;
+        --company-button-background: rgb(89, 100, 224, 0.1);
+        --company-button-text: #5964E0;
+        --company-button-background-hover: rgb(89, 100, 224, 0.3);
+        --detail-text-color: #6e8098;
+}
+@mixin darkMode {
+        --background-color: #121721; 
+        --background-div: #19202d;
+        //--background-color: $midnight; 
+        //--background-div: $very-dark-blue; 
+
+        --btn-hover: #939BF4;
+        --icon : #ffffff;
+        --btn-text: #ffffff;
+        --btn-color : #5964E0;
+        --job-title : #ffffff;
+        --company-button-mobile-background: rgba(89, 100, 224, 0.1);
+        --company-button-mobile-text: #5964E0;
+        --company-button-background: rgb(255, 255, 255, 0.1);
+        --company-button-background-hover: rgba(255, 255, 255, 0.3);
+        --company-button-text: #ffffff;
+        --small-text:  #6e8098;
+        --checkbox-color:rgb(255, 255, 255, 0.1);
+        --detail-text-color: #9DAEC2;
+}
+
+
+@mixin flex-center {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+}

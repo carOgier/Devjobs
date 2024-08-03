@@ -1,0 +1,67 @@
+/*****Job Cards*****/
+
+.job-cards {
+    position: relative;
+    z-index:0;
+}
+
+.job-list{
+    display: grid;
+    gap: 3rem;
+}
+
+@media screen and (min-width: 48em) {
+    .job-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem .6rem;
+    }
+}
+
+@media screen and (min-width: 90em) {
+    .job-list {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4rem 1.8rem;
+    }
+}
+
+.job-card {
+    display: grid;
+    gap:5px;
+    padding-block-end: 2rem;
+    padding-inline-start: 2rem;
+    border-radius: 6px;
+    background-color: var(--background-div);
+}
+
+.logo-company {
+    position:relative;
+    width: 50px;
+    height: 50px;
+    order: -1;
+    top: -25px;
+    padding: .5rem;
+    margin-bottom: -1rem;
+    border-radius: 15px;
+}
+
+.ts-contract-data {
+    order: -1;
+}
+
+.link-job-title {
+    text-decoration: none;
+}
+
+.link-job-title h2{  
+    &:focus,
+    &:hover  {
+    color: var(--small-text);
+    }
+}
+
+.card-location {
+    margin-block-start: 2.5rem;
+
+    color: var(--btn-color);
+    font-weight: 700;
+}

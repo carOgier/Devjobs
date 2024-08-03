@@ -1,0 +1,244 @@
+/*****Form*****/
+.search-form-container {
+    position: relative;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 1;
+    margin-block-end: clamp(2rem, 2rem + 2vw, 5rem);
+}
+
+.search-form-content{
+    @include flex-center;
+    width: 100%;
+    padding-inline: 1rem;
+    border-radius: 6px;
+    background-color: var(--background-div);
+}
+
+.filter-btn {
+    height: 44px;
+    width: 44px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.reduced-form {
+    @include flex-center;
+    justify-content: space-around;
+    padding-block: 1rem;
+}
+
+.form-title {
+    display:flex;
+    max-width: 75%;
+}
+
+.form-icon{
+    align-self: center;
+    display:inline-block;
+    max-height: 1.5rem;
+}
+
+.input-title, .input-location {
+    max-width: 80%;
+    background-color: transparent;
+    border: none;
+    outline:none;
+    color: var(--job-title);
+}
+
+.svg-filter {
+    max-width: 1.25rem;
+    max-height: 1.25rem;
+    margin-inline-end: 0.9rem;
+    fill : var(--icon);
+}
+
+.btn-search{
+    width: 3rem;
+    height: 3rem;
+}
+
+
+.form-time {
+    font-weight: 700;
+    color : var(--job-title);
+    text-transform: capitalize;
+    label {
+        display:flex;
+        align-items: center;
+    
+        .fulltime-checkbox {
+            position:absolute;
+            height: 1.5rem;
+            width: 1.5rem;
+            cursor:pointer;
+            opacity: 0;
+        }
+        .time-checkbox {
+            display: inline-block;
+            height: 1.5rem;
+            width: 1.5rem;
+            margin-inline-end: 1rem;
+            border-radius: 3px;
+            background-color: var(--checkbox-color);
+            
+            &:hover {
+                background-color: var(--btn-hover);
+            }
+        }
+        .fulltime-checkbox:checked~.time-checkbox {
+            background-color: #5964e0;
+            background-image: url("../assets/icon-check.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 70%;
+        }
+    }
+}
+
+/*Modal / 2e partie du form */
+
+.modal-form[hidden]{
+    display:none;
+}
+
+
+.form-location {
+    display: flex;
+    gap: 1rem;
+    .input-location {
+        max-width: 70%;
+    }
+}
+
+
+@media(max-width: 767px){
+   .modal-form:not([hidden]){
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30vw;
+    left: 1.5rem;
+    right: 1.5rem;
+    z-index: 10;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 6px;
+    background-color: var(--background-div);
+    
+        .form-location {
+            border-block-end: 1px rgb(110, 128, 152, 0.1) solid;
+            padding-block-end: 1.75rem;
+            .input-location {
+                max-width: 70%;
+            }
+        }
+    }
+ 
+}
+
+
+
+@media(min-width: 768px){
+    .modal-form[hidden], .modal-form {
+        display:flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        gap: 1rem;
+        padding-left: 1rem;
+        border-inline-start: 1px rgb(110, 128, 152, 0.1) solid;
+        .form-location {
+            border-inline-end: 1px rgb(110, 128, 152, 0.1) solid;
+            padding-block: 1.5rem;
+        }
+    }
+
+}
+
+
+
+
+@media(min-width: 1440px){
+    .search-form-content {
+        justify-content: space-between;
+        padding-inline-start: 2rem;
+    }
+    .modal-form[hidden], .modal-form{
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+        .btn {
+            padding-inline: 2rem;
+        }
+    }
+}
+
+
+
+@media(min-width: 1440px){
+    .form-location{
+        width: 45%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Overlay*/
+
+@media(min-width: 768px){
+    .overlay, .overlay[hidden]{
+      display:none;  
+    }
+}
+
+.overlay {
+    position: absolute;
+    width: 100vw;
+    height: 150vh;
+    top: -100px;
+    left:0;
+    bottom:0;
+    z-index: 5;
+    background-color: #000000;
+    opacity: 0.5;
+}
+
+
+
+/*Mobile-only et tablet */
+
+@media(max-width: 767px) {
+    .tablet{
+        display: none; 
+    }
+}
+
+@media(min-width: 768px) {
+    .mobile-only {
+        display: none; 
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .tablet-hide {
+        display: none;
+    }
+}

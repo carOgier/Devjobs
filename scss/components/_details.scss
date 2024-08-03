@@ -1,0 +1,142 @@
+/*****Details*****/
+
+.detail-header {
+    justify-items: center;
+    transform: translateY(-20px);
+}
+
+
+@media (min-width: 768px) {
+    .detail-header {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:0;
+        transform: translateY(-40px);
+
+        .logo-company {
+        display: block;
+        width: 8.75rem;
+        height: 8.75rem;
+        position: static;   
+        margin:0;
+        border-radius: 0;
+        }
+    }
+    .job-header-info{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding:2.5rem;
+    }
+}
+
+.fake-btn {
+    display:flex;
+    justify-content: center;
+    max-height: 3rem;
+    padding: .8rem;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    color: var(--btn-text);
+    background-color: var(--btn-color);
+}
+
+.company-site {
+    background-color: var(--company-button-mobile-background);
+    color: var(--company-button-mobile-text);
+    margin-block-start: 1.5rem;
+}
+
+@media(min-width: 768px) {
+    .company-site {
+        background-color: var(--company-button-background);
+        color: var(--company-button-text);
+        margin:0;
+        &:hover{ 
+            background-color: var(--company-button-background-hover);
+        }
+    }
+}
+
+.detail-content {
+    padding: 1.5rem;
+    gap: 40px;
+    .card-location{
+        margin-block-start: .5rem;
+        padding-block-end: 3.4rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .detail-content {
+        padding: 3rem;
+    }
+    .detail-content-info {
+        display:flex;
+        justify-content: space-between;
+        
+        .card-location {
+            padding-block-end: 0;
+        }
+    }
+}
+
+.requirements ul, .roles ol{
+    padding: 0;
+    margin: 0;
+}
+.requirements, .roles {
+    display:flex;
+    flex-direction: column;
+    gap : 1.75rem;
+}
+
+.requirements li::marker{
+    color: var(--btn-color);
+}
+
+.roles li {
+    counter-increment: li;
+}
+
+.roles li::marker{
+    font-weight: 700;
+    color: var(--btn-color);
+    content: counter(li);
+}
+ 
+.roles li, .requirements li {
+    margin-block-end: 7px;
+    margin-inline-start:1rem;
+    padding-inline-start:2.4rem;
+}
+
+.roles h3 {
+    text-transform: capitalize;
+}
+
+
+@media(min-width: 768px) {
+    .fake-btn {
+        max-width: 9rem;
+    }
+    .detail-footer {
+        display:flex;
+        justify-content: space-between;
+    }
+}
+
+footer{
+    background: var(--background-div);
+    padding-block: 1.5rem;
+    margin-top: 4rem;
+}
+
+
+.description, .requirements-content, .requirements-list, .roles-content, .roles-list {
+    color: var(--detail-text-color);
+}

@@ -1,0 +1,13 @@
+/*****Include light and dark color mixin*****/
+
+body.light { @include lightMode }
+body.dark { @include darkMode }
+
+@media (prefers-color-scheme: dark) {
+    body { @include darkMode }
+}
+
+@media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
+    body { @include lightMode }
+}
+

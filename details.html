@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevJobs</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav role="navigation">
+        <a href="#job-detail" id="skiplink">Main Content</a>
+    </nav>
+    
+    <header class="main-header">
+        <div class="container"> 
+            <div class="header-content">
+
+                <div class="logo-container">
+                    <h1 class="screen-reader-text">DevJobs</h1>
+                    <a href="index.html" class="logo-link">
+                        <img src="./assets/logo.svg" class="logo" alt="">
+                    </a>
+                </div>
+
+                <div class="toggle-container">
+                    <img src="./assets/icon-sun.svg" class="sun-icon" alt="">
+                    <label for="toggle-switch">
+                        <input type="checkbox" class="screen-reader-text switch" id="toggle-switch">
+                        <span></span>
+                    </label>
+                    <img src="./assets/icon-moon.svg" alt="" class="moon-icon">
+                </div>    
+
+            </div>
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <section class="" id="job-result">
+            <header class="container detail-container" >
+                <div class="job-card detail-header" id="job-header">
+                    <template id="job-header-template">
+                    <span class="job-header-info">
+                        <span>
+                            <h2 class="position h2">Scoot</h2>
+                            <p class="website">scoot.com</p>   
+                        </span>
+                            <a href="" class="fake-btn company-site">Company Site</a>
+                    </span>
+
+                    
+                    <img src="" alt="" class="logo-company" style="background-color: #E99210">
+                    
+                </template> 
+                </div>
+               
+
+            </header>
+            
+            <div class="container detail-container" id="job-detail"  tabindex="-1">
+
+                <template id="job-detail-template">
+
+                    <div class="job-card detail-content">
+                       <div class="detail-content-info">
+                        <div>
+                        <span class="ts-contract-data">5h ago &#8226; full time </span> 
+                        <h2 class="position h2">Senior Software Engineer</h2>
+                        <p class="card-location">United Kingdom</p>
+                        </div>
+                        
+                        <a href="company.com" class="fake-btn">Apply Now</a>
+                        </div>
+
+                        <p class="description"></p>
+
+                        <div class="requirements" id="requirements">
+                            <h3>Requirements</h3>
+                            <p class="requirements-content"></p>
+                            <ul class="requirements-list">
+                            </ul>
+                        </div>
+
+                        <div class="roles" id="roles">
+                            <h3>What you will do</h3>
+                            <p class="roles-content"></p>
+                            <ol class="roles-list">
+                            </ol>
+                        </div>
+
+                    </div>
+
+                </template>
+        
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container detail-footer detail-container" id="footer-template">
+            <template id="job-footer-template">
+                <div>
+                    <h3 class="tablet"></h3>
+                    <p class="tablet"></p>
+                </div>
+                <a href="" class="fake-btn">Apply Now</a>
+            </template>
+        </div>
+            
+    </footer>
+
+
+
+    
+    <script src="./scripts/loadingAnimation.js"></script>
+    <script src="./scripts/api.js"></script>
+    <script src="./scripts/details.js"></script>
+    
+    <script src="./scripts/timestamps.js"></script>
+    <script src="./scripts/theme.js"></script>
+    
+</body>
+</html>
